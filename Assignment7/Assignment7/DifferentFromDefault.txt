@@ -1,0 +1,18 @@
+﻿In this file we will detail the changes to the application that are different from the base model that was created.
+
+Over time we will be able to delete the premade parts of the application but for now we will keep the structure.
+
+If you have any questions feel free to message me on Canvas but you'll probably reach me faster on Discord | FireBot #0187
+
+I have made the Database in Azure Cloud using SQL Server, which you should all be able to connect to now, just "Add SQL Server" in Sql Server Object Explorer
+
+SQL Azure Logon:
+Server Name: aspnetgaragesale.database.windows.net
+User: GarageSaleAdmin
+Password: GarageSale#
+Database Name: Users
+
+I already did the dotnet ef database update so it will have all of the identity tables that are built in with
+the authentication option we chose when creating the Application which uses the Identity Framework.
+
+I'll be adding in the ApplicationDBContext for the Entity framework so we can add our listing table, but it will work on the cloud as well
