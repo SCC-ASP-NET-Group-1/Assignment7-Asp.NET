@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Assignment7.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AppIdentityDbContext))]
+    partial class AppIdentityDbModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

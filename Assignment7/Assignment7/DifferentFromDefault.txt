@@ -11,4 +11,8 @@ I have made the Database in Azure Cloud using SQL Server, which you should all b
 I already did the dotnet ef database update so it will have all of the identity tables that are built in with
 the authentication option we chose when creating the Application which uses the Identity Framework.
 
-I'll be adding in the ApplicationDBContext for the Entity framework so we can add our listing table, but it will work on the cloud as well
+
+Renamed the initial ApplicationDbContext to the IdentityDbContext and turned the ApplicationDbContext into our entity framework context.
+
+Added a Listing class that has been migrated to our database (you will find this as a table in the User database. I don't know why I thought it was making two databases. But yes we will be able to
+relate the Identity database and our Entity database by the UserName field, further updates to the class will require new migrations. Only needed if we change class members (not dataannotations)
