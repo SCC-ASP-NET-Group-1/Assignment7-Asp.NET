@@ -6,11 +6,7 @@ If you have any questions feel free to message me on Canvas but you'll probably 
 
 I have made the Database in Azure Cloud using SQL Server, which you should all be able to connect to now, just "Add SQL Server" in Sql Server Object Explorer
 
-SQL Azure Logon:
-Server Name: aspnetgaragesale.database.windows.net
-User: GarageSaleAdmin
-Password: GarageSale#
-Database Name: Users
+
 
 I already did the dotnet ef database update so it will have all of the identity tables that are built in with
 the authentication option we chose when creating the Application which uses the Identity Framework.
