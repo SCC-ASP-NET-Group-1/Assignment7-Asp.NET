@@ -1,4 +1,4 @@
-﻿In this file we will detail the changes to the application that are different from the base model that was created.
+﻿In this file we will detail the changes to the application that are different from the base template that was created.
 
 Over time we will be able to delete the premade parts of the application but for now we will keep the structure.
 
