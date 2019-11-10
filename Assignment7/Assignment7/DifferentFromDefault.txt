@@ -15,5 +15,5 @@ the authentication option we chose when creating the Application which uses the 
 When using any migration we will have to specify the DbContext ~~~ dotnet ef migrations add [MigrationName] --context [ApplicationDbContext] OR [AppIdentityDbContext] -o Data/[ApplicationDbMigrations] OR [AppIdentityDbMigrations]
 Renamed the initial ApplicationDbContext to the IdentityDbContext and turned the ApplicationDbContext into our entity framework context.
 
-Added a Listing class that has been migrated to our database (you will find this as a table in the User database. I don't know why I thought it was making two databases. But yes we will be able to
+Added a Listing class that has been migrated to our database (you will find this as a table in the GarageSale database. I don't know why I thought it was making two databases. But yes we will be able to
 relate the Identity database and our Entity database by the UserName field, further updates to the class will require new migrations. Only needed if we change class members (not dataannotations)

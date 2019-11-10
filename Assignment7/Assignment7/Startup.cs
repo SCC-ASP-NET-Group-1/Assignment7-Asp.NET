@@ -40,6 +40,7 @@ namespace Assignment7
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IListingRepository, EFListingRepository>();
 
             services.AddMvc();
         }
@@ -66,8 +67,9 @@ namespace Assignment7
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Listing}/{action=AllListings}/{id?}");
             });
+            SeedEntities.EnsurePopulated(app);
         }
     }
 }
