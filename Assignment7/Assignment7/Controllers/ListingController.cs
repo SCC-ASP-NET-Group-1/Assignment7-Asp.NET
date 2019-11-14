@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Assignment7.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Assignment7.Controllers
@@ -15,6 +16,19 @@ namespace Assignment7.Controllers
         {
             repository = repo;
         }
+
+        //[Authorize]
+        public IActionResult addListing()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddUserListing(Listing listing)
+        {
+            return View();
+        }
+
 
         public ViewResult AllListings() => View(repository.Listings);
     }

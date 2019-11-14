@@ -1,0 +1,28 @@
+﻿@model Assignment7.Models.Listing
+@{
+    ViewData["Title"] = "addListing";
+}
+
+<h2>addListing</h2>
+
+<form asp-action="AddUserListing" method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <label asp-for="Username">Your Username</label>
+    <input asp-for="Username"  value="hi" disabled /><br />
+
+    <label asp-for="Name">Enter the Item Name</label>
+    <input asp-for="Name" /><br />
+
+    <label asp-for="Price">Enter the Item Price</label>
+    <input asp-for="Price" /><br />
+
+    <label asp-for="Description">Enter the Item's Description</label>
+    <input asp-for="Description" /><br />
+
+    <label asp-for="ZipCode">Enter the Item's Description</label>
+    <input asp-for="ZipCode" />
+
+    <button type="submit">Post Listing</button>
+</form>
