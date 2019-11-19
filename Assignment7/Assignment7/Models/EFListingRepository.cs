@@ -15,6 +15,13 @@ namespace Assignment7.Models
             context = ctx;
         }
 
+        public Listing Add(Listing listing)
+        {
+            context.Listings.Add(listing);
+            context.SaveChanges();
+            return listing;
+        }
+
         public IQueryable<Listing> Listings => context.Listings;
     }
 }

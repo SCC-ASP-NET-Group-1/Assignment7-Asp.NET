@@ -8,5 +8,7 @@ namespace Assignment7.Models
     public interface IListingRepository
     {
         IQueryable<Listing> Listings { get; }
+
+        Listing Add(Listing listing);
     }
 }

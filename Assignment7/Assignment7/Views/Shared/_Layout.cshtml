@@ -26,13 +26,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Assignment7</a>
+                <a asp-area="" asp-controller="Listing" asp-action="AllListings" class="navbar-brand">Garage Sales</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Listing" asp-action="AllListings">All Listings</a></li>
+                    <li><a asp-area="" asp-controller="Listing" asp-action="AddListing">New Listing</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -42,7 +41,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - Assignment7</p>
+            <p>&copy; 2019 - Garage Sales</p>
         </footer>
     </div>
 

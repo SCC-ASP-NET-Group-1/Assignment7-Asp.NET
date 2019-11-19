@@ -63,7 +63,7 @@ namespace Assignment7
 
             app.UseAuthentication();
 
-            app.UseMvc(routes =>
+            app.UseMvc(routes => // This sets up the MVC roots for our controller.
             {
                 routes.MapRoute(
                     name: "default",
@@ -73,7 +73,7 @@ namespace Assignment7
                     name: "listing",
                     template: "{controller=Listing}/{action=ViewListing}/{id}");
             });
-            SeedEntities.EnsurePopulated(app);
+            SeedEntities.EnsurePopulated(app); // This populates the database. Models/SeedEntities.cs
         }
     }
 }
