@@ -26,7 +26,17 @@ namespace Assignment7.Controllers
         [HttpPost]
         public IActionResult AddUserListing(Listing listing)
         {
-            return View();
+            if(ModelState.IsValid)
+            {
+                repository.Add(listing);
+                return View("AllListings", repository.Listings);
+            }
+            else
+            {
+                return View("addListing");
+            }
+
+
         }
 
 
