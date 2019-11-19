@@ -31,5 +31,7 @@ namespace Assignment7.Controllers
 
 
         public ViewResult AllListings() => View(repository.Listings);
+
+        public ViewResult ViewListing() => View(repository.Listings);
     }
 }
