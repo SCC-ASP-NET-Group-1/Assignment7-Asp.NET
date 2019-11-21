@@ -455,7 +455,7 @@ namespace Assignment7.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction(nameof(ListingsController.Index), "Listings");
             }
         }
 
