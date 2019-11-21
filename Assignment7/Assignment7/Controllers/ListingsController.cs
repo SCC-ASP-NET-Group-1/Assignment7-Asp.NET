@@ -7,15 +7,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Assignment7.Data;
 using Assignment7.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Assignment7.Controllers
 {
     public class ListingsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ListingsController(ApplicationDbContext context)
+
+
+
+
+
+
+
+        public ListingsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
         }
 
@@ -46,6 +56,9 @@ namespace Assignment7.Controllers
         // GET: Listings/Create
         public IActionResult Create()
         {
+            
+            
+            
             return View();
         }
 
@@ -54,10 +67,21 @@ namespace Assignment7.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ListingID,Name,Description,Price,Username,ZipCode")] Listing listing)
+        public async Task<IActionResult> Create([Bind("ListingID,Name,Description,Price,ZipCode")] Listing listing)
         {
+
+           
+
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+            listing.Username = user.UserName;
             if (ModelState.IsValid)
             {
+                
                 _context.Add(listing);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
