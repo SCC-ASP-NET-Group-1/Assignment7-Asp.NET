@@ -21,7 +21,7 @@ namespace Assignment7.Models
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a positive price")]
         public decimal Price { get; set; }
 
-        [Required(ErrorMessage = "Please enter a username")]
+        
         public string Username { get; set; }
 
         [Required(ErrorMessage = "Please enter a zip code")]
