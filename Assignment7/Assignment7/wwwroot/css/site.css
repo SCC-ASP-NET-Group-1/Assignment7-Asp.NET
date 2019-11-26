@@ -24,18 +24,21 @@
     margin: 15px;
 }
 
-.rightColumn {
-    width: 73vw;
-    float: left;
+.right-column {
+    width: 70%;
+    float: right;
     min-height: 100vh;
     height: 100%;
+    position: relative;
+    background-color: #368cbf;
 }
 
-.leftColumn {
-    width: 25vw;
+.left-column {
+    width: 30%;
     float: left;
-    background-color: #BC986A;
+    background-color: #33363b;
     height: 100vh;
+    position: fixed;
 }
 
 .main-logo-container {
@@ -47,17 +50,15 @@
     font-size: 40px;
     text-decoration: none;
     margin-top: 25%;
-    color: white;
-
+    color: #eaeaea;
 }
 
-main-logo:hover,main-logo:focus {
+main-logo:hover, main-logo:focus {
     text-decoration: none;
-    color: white;
-    
+    color: #eaeaea;
 }
 a:hover, a:focus {
-    color: white;
+    color: #eaeaea;
     text-decoration: none;
 }
 
@@ -76,22 +77,24 @@ a:hover, a:focus {
 
 .primary-nav ul li {
     list-style: none;
+    margin-top: 10px;
 }
 
-.primary-nav ul li a {
-    text-decoration: none;
-    font-family: 'Fredoka One', cursive;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: white;
-}
+    .primary-nav ul li a {
+        text-decoration: none;
+        font-family: 'Fredoka One', cursive;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #eaeaea;
+    }
 
 h2 {
     text-decoration: none;
     font-family: 'Bungee', cursive;
     font-size: 30px;
     text-transform: uppercase;
-    text-align:center;
+    text-align: center;
+    color: #eaeaea;
 }
 
 .create-listing {
@@ -99,14 +102,106 @@ h2 {
     margin: 0 auto;
 }
 
-.create-listing a {
-    background-color: green;
-    padding: 7.5px 15px;
-    color: white;
-    font-family: 'Fredoka One', cursive;
-    font-size: 20px;
+    .create-listing a {
+        background-color: #7ebc59;
+        padding: 7.5px 15px;
+        color: #eaeaea;
+        font-family: 'Fredoka One', cursive;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+.listing-container {
+    padding: 20px;
+}
+.listing p {
+    margin: 0px;
+}
+.listing {
+    font-family: 'Roboto', sans-serif;
+    color: #eaeaea;
+    padding: 20px;
+    background-color: #33363b;
+    margin-bottom: 10px;
     border-radius: 10px;
 }
+.listing-top-row {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.listing-middle-row {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.listing-bottom-row {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+.listing-title {
+    font-size: 30px;
+    float: left;
+
+}
+.listing-description {
+    font-size: 20px;
+    display: block;
+    width: 80%;
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+}
+    .listing-description::before {
+        content: open-quote;
+    }
+
+    .listing-description::after {
+        content: close-quote;
+    }
+
+.listing-price {
+    font-size: 26px;
+    float: left;
+    margin-right: 5px;
+}
+
+.listing-username {
+    font-size: 24px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: -25%;
+    left: 50%;
+}
+
+.listing-zipcode {
+    float: right;
+    font-size: 20px;
+}
+.listing-button {
+    background-color: #7ebc59;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: #eaeaea;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 11px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+
+
 
 
 /* Hide/rearrange for smaller screens */
