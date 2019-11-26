@@ -8,18 +8,17 @@ using Microsoft.EntityFrameworkCore;
 using Assignment7.Data;
 using Assignment7.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Assignment7.Controllers
 {
+    [Authorize]
     public class ListingsController : Controller
     {
+
+        
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-
-
-
-
-
 
 
 
@@ -28,13 +27,15 @@ namespace Assignment7.Controllers
             _userManager = userManager;
             _context = context;
         }
-
+        
+        [AllowAnonymous]
         // GET: Listings
         public async Task<IActionResult> Index()
         {
             return View(await _context.Listings.ToListAsync());
         }
 
+        [AllowAnonymous]
         // GET: Listings/Details/5
         public async Task<IActionResult> Details(int? id)
         {

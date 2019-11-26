@@ -50,9 +50,7 @@
             </td>
             <td>
                 <!-- There needs to be an if/else statement. If listing is made by logged in user, show the edit and delete fields. -->
-                <a asp-action="Edit" asp-route-id="@item.ListingID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ListingID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ListingID">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.ListingID">Details</a>
             </td>
         </tr>
 }
