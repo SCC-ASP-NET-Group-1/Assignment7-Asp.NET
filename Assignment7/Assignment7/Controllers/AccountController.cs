@@ -247,7 +247,7 @@ namespace Assignment7.Controllers
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(ListingsController.Index), "Listings");
+            return RedirectToAction(nameof(ListingsController.AllListings), "Listings");
         }
 
         [HttpPost]
@@ -455,7 +455,7 @@ namespace Assignment7.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(ListingsController.Index), "Listings");
+                return RedirectToAction(nameof(ListingsController.AllListings), "Listings");
             }
         }
 

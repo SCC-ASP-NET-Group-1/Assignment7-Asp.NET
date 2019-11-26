@@ -8,26 +8,32 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bungee|Fredoka+One&display=swap" rel="stylesheet">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet" asp-append-version="true">
+        <link href="https://fonts.googleapis.com/css?family=Bungee|Fredoka+One&display=swap" rel="stylesheet" asp-append-version="true">
     </environment>
 </head>
 <body>
     <div class="leftColumn">
-        <nav class="primary-nav">
-                <div>
-                    <a asp-area="" asp-controller="Listing" asp-action="AllListings" class="mainLogo">Garage Sales</a>
-                </div>
+        <div class="main-logo-container">
+            <a asp-area="" asp-controller="Listings" asp-action="AllListings" class="main-logo">Garage Sales</a>
+        </div>
+        <div class="nav-container">
+            <nav class="primary-nav">
                 <ul>
-                    <li><a asp-area="" asp-controller="Listings" asp-action="Index">All Listings</a></li>
+                    <li><a asp-area="" asp-controller="Listings" asp-action="AllListings">All Listings</a></li>
                     <li><a asp-area="" asp-controller="Listings" asp-action="Create">New Listing</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
-        </nav>
+            </nav>
+        </div>
     </div>
     <div class="rightColumn">
         @RenderBody()

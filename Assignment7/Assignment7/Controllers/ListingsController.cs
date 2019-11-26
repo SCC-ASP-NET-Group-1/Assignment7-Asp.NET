@@ -30,7 +30,7 @@ namespace Assignment7.Controllers
         }
 
         // GET: Listings
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> AllListings()
         {
             return View(await _context.Listings.ToListAsync());
         }
@@ -84,7 +84,7 @@ namespace Assignment7.Controllers
                 
                 _context.Add(listing);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(AllListings));
             }
             return View(listing);
         }
@@ -135,9 +135,14 @@ namespace Assignment7.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(allListings));
             }
             return View(listing);
+        }
+
+        private object allListings()
+        {
+            throw new NotImplementedException();
         }
 
         // GET: Listings/Delete/5
@@ -166,7 +171,7 @@ namespace Assignment7.Controllers
             var listing = await _context.Listings.SingleOrDefaultAsync(m => m.ListingID == id);
             _context.Listings.Remove(listing);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(allListings));
         }
 
         private bool ListingExists(int id)

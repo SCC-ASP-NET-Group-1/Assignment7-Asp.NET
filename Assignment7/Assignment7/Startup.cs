@@ -67,11 +67,11 @@ namespace Assignment7
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Listings}/{action=Index}");
+                    template: "{controller=Listings}/{action=AllListings}");
 
                 routes.MapRoute(
                     name: "listing",
-                    template: "{controller=Listing}/{action=ViewListing}/{id}");
+                    template: "{controller=Listings}/{action=ViewListing}/{id}");
             });
             SeedEntities.EnsurePopulated(app); // This populates the database. Models/SeedEntities.cs
         }
