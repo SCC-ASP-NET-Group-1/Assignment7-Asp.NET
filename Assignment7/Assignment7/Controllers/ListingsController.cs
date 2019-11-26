@@ -12,23 +12,30 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Assignment7.Controllers
 {
+    [Authorize]
     public class ListingsController : Controller
     {
+
+        
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
+
+
 
         public ListingsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
             _context = context;
         }
-
+        
+        [AllowAnonymous]
         // GET: Listings
         public async Task<IActionResult> Index()
         {
             return View(await _context.Listings.ToListAsync());
         }
 
+        [AllowAnonymous]
         // GET: Listings/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -50,6 +57,9 @@ namespace Assignment7.Controllers
         // GET: Listings/Create
         public IActionResult Create()
         {
+            
+            
+            
             return View();
         }
 
