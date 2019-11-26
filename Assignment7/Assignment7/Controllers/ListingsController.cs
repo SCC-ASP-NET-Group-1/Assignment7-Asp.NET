@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Assignment7.Data;
 using Assignment7.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Assignment7.Controllers
 {
@@ -15,13 +16,6 @@ namespace Assignment7.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-
-
-
-
-
-
-
 
         public ListingsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
@@ -56,9 +50,6 @@ namespace Assignment7.Controllers
         // GET: Listings/Create
         public IActionResult Create()
         {
-            
-            
-            
             return View();
         }
 

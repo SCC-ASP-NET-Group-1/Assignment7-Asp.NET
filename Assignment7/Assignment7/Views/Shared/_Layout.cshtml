@@ -20,11 +20,12 @@
     <div class="leftColumn">
         <nav class="primary-nav">
                 <div>
-                    <a asp-area="" asp-controller="Listing" asp-action="AllListings" class="mainLogo">Garage Sales</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="mainLogo">Garage Sales</a>
                 </div>
                 <ul>
                     <li><a asp-area="" asp-controller="Listings" asp-action="Index">All Listings</a></li>
                     <li><a asp-area="" asp-controller="Listings" asp-action="Create">New Listing</a></li>
+                    <li><a asp-area="" asp-controller="Cart" asp-action="Index">Cart</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
         </nav>

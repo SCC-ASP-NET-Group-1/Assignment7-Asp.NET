@@ -67,7 +67,7 @@ namespace Assignment7
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Listings}/{action=Index}");
+                    template: "{controller=Home}/{action=Index}");
 
                 routes.MapRoute(
                     name: "listing",
