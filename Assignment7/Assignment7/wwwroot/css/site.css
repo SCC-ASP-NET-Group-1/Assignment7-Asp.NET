@@ -26,6 +26,38 @@
     margin: 15px;
 }
 
+.rightColumn {
+    width: 80%;
+    float: left;
+}
+
+.leftColumn {
+    width: 20%;
+    float: left;
+}
+
+.mainLogo {
+
+}
+
+.primary-nav {
+    text-align: center;
+}
+
+.primary-nav ul {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.primary-nav ul li {
+    list-style: none;
+}
+
+.primary-nav ul li a {
+    text-decoration: none;
+}
+
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
@@ -33,3 +65,4 @@
         display: none;
     }
 }
+
