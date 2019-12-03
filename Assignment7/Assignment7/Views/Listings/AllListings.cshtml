@@ -13,6 +13,7 @@
     {
     <div class="listing">
         <div class="listing-top-row">
+            <p class="listing-username">@Html.DisplayFor(modelItem => item.Username)</p>
             <p class="listing-title">@Html.DisplayFor(modelItem => item.Name)</p>
             <p class="listing-zipcode">@Html.DisplayFor(modelItem => item.ZipCode)</p>
         </div>
@@ -22,11 +23,10 @@
         </div>
         <div style="clear:both"></div>
         <div class="listing-bottom-row">
-            <p class="listing-price">@Html.DisplayFor(modelItem => item.Price)</p>
             <a asp-action="Details" asp-route-id="@item.ListingID" class="listing-button left">Add To Cart&nbsp;<i class="fas fa-cart-plus"></i></a>
+            <p class="listing-price">@Html.DisplayFor(modelItem => item.Price)</p>
             <a asp-action="Details" asp-route-id="@item.ListingID" class="listing-button right">Details</a>
-            <div style="clear:both"></div>
-            <p class="listing-username">@Html.DisplayFor(modelItem => item.Username)</p>
+            <div style="clear:both"></div><br />
         </div>
 
 

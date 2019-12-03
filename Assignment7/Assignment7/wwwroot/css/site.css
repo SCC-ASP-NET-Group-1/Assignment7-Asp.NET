@@ -124,6 +124,8 @@ h2 {
     background-color: #33363b;
     margin-bottom: 10px;
     border-radius: 10px;
+    padding-bottom: 0px;
+    padding-top: 7px;
 }
 .listing-top-row {
     display: block;
@@ -166,15 +168,22 @@ h2 {
 .listing-price {
     font-size: 26px;
     float: left;
-    margin-right: 5px;
+    margin-left: 5px !important;
+}
+
+.listing-price::before {
+    content: "$";
 }
 
 .listing-username {
-    font-size: 24px;
+    font-size: 25px;
     position: absolute;
     transform: translate(-50%);
-    bottom: -25%;
     left: 50%;
+    margin-top: -5px !important;
+    color: #7ebc59;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
 }
 
 .listing-zipcode {
@@ -189,7 +198,40 @@ h2 {
     font-family: 'Bungee', cursive;
     font-size: 20px;
     border-radius: 10px;
-    margin-left: 11px;
+}
+
+.login-container {
+    margin: 0 auto;
+    max-width: 75%;
+    background-color: #33363b;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.login-container ul li, .login-container span {
+    color: #7ebc59;
+}
+
+.login-description {
+   text-align: center;
+   text-transform: uppercase;
+   color: white;
+}
+
+.login-label {
+    color: white;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group input {
+    
+}
+
+.login-extra {
+    color: #368cbf;
+    font-size: 18px;
 }
 
 .right {
