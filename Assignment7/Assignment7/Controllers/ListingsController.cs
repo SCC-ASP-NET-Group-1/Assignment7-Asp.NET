@@ -156,12 +156,14 @@ namespace Assignment7.Controllers
 
             var listing = await _context.Listings
                 .SingleOrDefaultAsync(m => m.ListingID == id);
+            _context.Listings.Remove(listing);
+            await _context.SaveChangesAsync();
             if (listing == null)
             {
                 return NotFound();
             }
 
-            return View(listing);
+            return View("AllListings", await _context.Listings.ToListAsync());
         }
 
         // POST: Listings/Delete/5

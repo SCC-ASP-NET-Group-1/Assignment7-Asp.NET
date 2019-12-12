@@ -26,6 +26,7 @@
             <a asp-action="Details" asp-route-id="@item.ListingID" class="listing-button left">Add To Cart&nbsp;<i class="fas fa-cart-plus"></i></a>
             <p class="listing-price">@Html.DisplayFor(modelItem => item.Price)</p>
             <a asp-action="Details" asp-route-id="@item.ListingID" class="listing-button right">Details</a>
+            <a asp-action="Delete" asp-route-id="@item.ListingID" class="listing-button right">Delete</a>
             <div style="clear:both"></div><br />
         </div>
 

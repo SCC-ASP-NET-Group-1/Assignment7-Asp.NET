@@ -23,5 +23,6 @@ namespace Assignment7.Models
         }
 
         public IQueryable<Listing> Listings => context.Listings;
+
     }
 }
